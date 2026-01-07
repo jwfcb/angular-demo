@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <h1>Angular Demo App</h1>
+      <div class="status-badge" [class.production]="environment === 'production'">
+        {{ environment }}
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="label">Version</div>
+        <div class="value">{{ appVersion }}</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Pod Name</div>
+        <div class="value">{{ podName }}</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Namespace</div>
+        <div class="value">{{ podNamespace }}</div>
+      </div>
+
+      <div class="info-item">
+        <div class="label">Node</div>
+        <div class="value">{{ nodeName }}</div>
+      </div>
+    </div>
+
+    <div class="live-section">
+      <h2>Live Updates</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Current Time</div>
+          <div class="value">{{ currentTime | date:'medium' }}</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Page Uptime</div>
+          <div class="value">{{ uptimeFormatted }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>✓ Angular 19 | ✓ Kubernetes Ready | ✓ OpenShift Compatible</p>
+    </div>
+  </div>
+</div>
